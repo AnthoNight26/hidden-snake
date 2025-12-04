@@ -1,0 +1,66 @@
+/* Style global */
+body { font-family: sans-serif; margin: 0; padding: 0; display: flex; }
+.container { max-width: 800px; margin: 0 auto; padding: 20px; }
+
+#pipop1 {
+    position: fixed;
+}
+#snake-overlay {
+    position: fixed;       /* Reste collé à l'écran même si on scroll */
+    top: 0;
+    left: 0;
+    width: 100vw;          /* Largeur de l'écran */
+    height: 100vh;         /* Hauteur de l'écran */
+    z-index: 99999;        /* Au-dessus de TOUT */
+    
+    /* C'est ces 3 lignes qui centrent la boite au milieu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Transition douce (optionnel) */
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Quand c'est caché */
+#snake-overlay.hidden {
+    display: none !important;
+    opacity: 0;
+}
+
+/* 2. LA FENÊTRE POP-UP (Le cadre du jeu) */
+.game-popup {
+    position: relative;    /* Important pour placer la croix par rapport à la boite */
+    background-color: #111;
+    padding: 30px;
+    border: 3px solid #00FF00; /* Vert hacker */
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0, 255, 0, 0.3);
+    text-align: center;
+    color: #00FF00;
+}
+
+/* 3. LA CROIX DE FERMETURE */
+.close-btn {
+    position: absolute;    /* Position libre dans la popup */
+    top: 10px;
+    right: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #00FF00;
+    cursor: pointer;
+    line-height: 20px;     /* Pour bien centrer le symbole */
+}
+
+.close-btn:hover {
+    color: red;            /* Change de couleur au survol */
+}
+
+/* Ajustement du canvas */
+canvas {
+    background: #000;
+    border: 1px solid #333;
+    display: block;
+    margin: 10px auto;
+}
