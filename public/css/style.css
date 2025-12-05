@@ -177,3 +177,49 @@ body {
         text-align: center;
     }
 }
+
+/* =========================================
+   🌙 MODE SOMBRE (DARK MODE)
+   ========================================= */
+
+body.dark-mode {
+    background-color: #121212; /* Noir profond */
+    color: #e0e0e0; /* Blanc cassé pour le texte (moins agressif) */
+}
+
+/* On assombrit les conteneurs blancs */
+body.dark-mode .container, 
+body.dark-mode section,
+body.dark-mode .contact-info {
+    background-color: #1e1e1e; /* Gris foncé */
+    color: #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Ombres plus marquées */
+    border-color: #333; /* Bordures plus sombres */
+}
+
+/* Ajustement des titres */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode .highlight {
+    color: #66bb6a; /* Un vert un peu plus clair pour ressortir sur le noir */
+}
+
+body.dark-mode h1,
+body.dark-mode section h2 {
+    border-bottom-color: #333; /* Lignes de séparation sombres */
+}
+
+/* Liens */
+body.dark-mode a {
+    color: #81c784; /* Vert clair */
+}
+
+body.dark-mode .back-link {
+    color: #66bb6a;
+}
+
+/* Le Footer Pro reste sombre, mais on peut l'ajuster si besoin */
+body.dark-mode .footer-pro {
+    background-color: #000; /* Noir total pour le footer */
+    border-top-color: #66bb6a;
+}

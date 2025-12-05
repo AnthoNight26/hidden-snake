@@ -58,6 +58,58 @@
         <p>&copy; 2025 Snake History | Conçu avec passion pour le code et les reptiles.</p>
     </div>
 </footer>
+<button id="theme-toggle" onclick="toggleTheme()" style="
+    position: fixed; 
+    bottom: 20px; 
+    left: 20px; 
+    z-index: 1000; 
+    background-color: #333; 
+    color: #fff; 
+    border: 2px solid #4CAF50; 
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    font-size: 24px; 
+    cursor: pointer; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s;">
+    🌙
+</button>
+
+<script>
+    // Vérifie si l'utilisateur a déjà choisi un thème
+    const currentTheme = localStorage.getItem('theme');
+    const btnTheme = document.getElementById('theme-toggle');
+
+    // Applique le thème au chargement
+    if (currentTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        btnTheme.innerHTML = "☀️"; // Change l'icone en soleil
+        btnTheme.style.backgroundColor = "#fff";
+        btnTheme.style.color = "#333";
+    }
+
+    function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+        
+        let theme = 'light';
+        
+        // Si la classe est présente, on est en mode sombre
+        if (document.body.classList.contains('dark-mode')) {
+            theme = 'dark';
+            btnTheme.innerHTML = "☀️"; // Soleil
+            btnTheme.style.backgroundColor = "#fff";
+            btnTheme.style.color = "#333";
+        } else {
+            btnTheme.innerHTML = "🌙"; // Lune
+            btnTheme.style.backgroundColor = "#333";
+            btnTheme.style.color = "#fff";
+        }
+        
+        // On sauvegarde le choix dans la mémoire du navigateur
+        localStorage.setItem('theme', theme);
+    }
+</script>
 
 </body>
 </html>
