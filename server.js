@@ -57,6 +57,12 @@ app.get('/snake_arcade', (req, res) => {
     });
 });
 
+app.get('/api/my-ip', (req, res) => {
+    // Récupère l'IP (gère les cas derrière un proxy comme Heroku ou Nginx)
+    const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+    res.json({ ip: ip });
+});
+
 // Redirection pour toute autre page (404)
 app.use((req, res) => {
     res.status(404).render('index', { title: "Page introuvable" });
