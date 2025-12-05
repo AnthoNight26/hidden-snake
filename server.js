@@ -57,6 +57,13 @@ app.get('/snake_arcade', (req, res) => {
     });
 });
 
+app.get('/hacker_corner', (req, res) => {
+    res.render('hacker_corner', { 
+        title: "Hidden snake",
+        date: new Date().toLocaleDateString("fr-FR") // Exemple de donnée dynamique
+    });
+});
+
 app.get('/api/my-ip', (req, res) => {
     // Récupère l'IP (gère les cas derrière un proxy comme Heroku ou Nginx)
     const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;

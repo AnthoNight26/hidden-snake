@@ -6,75 +6,22 @@
     <title>Politique de Non-Confidentialité | Histoire de Snake</title>
     <link rel="stylesheet" href="/css/game.css">
     <link rel="stylesheet" href="/css/style.css">
-    
+    <style>
+        canvas[Attributes Style] {
+            aspect-ratio: auto 600 / 800;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <a href="/" class="back-link">← Retour à la sécurité (Accueil)</a>
 
-        <h1>Politique de Surveillance et d'Espionnage (Bienveillant)</h1>
+        <h1>Te voici dans le hacker corner</h1>
 
-        <div class="legal-warning">
-            <strong>Avertissement :</strong> En lisant ce texte, vous acceptez que nous sachions déjà que vous êtes en train de le lire. Souriez, vous êtes loggé.
-        </div>
-
-        <p>Bienvenue dans la zone de non-droit du site <strong>"Histoire de Snake"</strong>. Contrairement aux autres sites qui prétendent protéger votre vie privée, nous préférons jouer cartes sur table : nous sommes très curieux.</p>
-
-        <h2>1. Ce que nous savons déjà sur vous</h2>
-        <p>Dès que vous êtes arrivé ici, nos petits robots (et surtout notre script JavaScript) se sont mis au travail. Nous collectons activement :</p>
-        <ul>
-            <li><strong>Votre Adresse IP :</strong> Juste pour savoir dans quelle ville vous habitez (c'est pour envoyer des cartes postales, promis).</li>
-            <li><strong>Votre Niveau de Batterie :</strong> Si vous êtes en dessous de 20%, nous vous jugeons silencieusement.</li>
-            <li><strong>La Taille de votre Écran :</strong> Car la taille, ça compte (pour l'affichage du Snake).</li>
-            <li><strong>Votre Navigateur :</strong> Nous savons si vous utilisez Internet Explorer. Si c'est le cas, nous sommes désolés pour vous.</li>
-        </ul>
-
-        <h2>2. Pourquoi collectons-nous ces données ?</h2>
-        <p>Pas pour les vendre à la Russie ou à la NSA, rassurez-vous. Nos objectifs sont beaucoup plus nobles :</p>
-        <ol>
-            <li><strong>Nourrir le Snake :</strong> Le serpent numérique a besoin d'octets frais pour grandir. Vos cookies sont son dessert préféré.</li>
-            <li><strong>Statistiques d'Ego :</strong> Pour que les développeurs puissent se vanter d'avoir eu "au moins 3 visiteurs aujourd'hui".</li>
-            <li><strong>La fonctionnalité "Mouchard" :</strong> Pour vous faire peur avec le bouton "VOIR CE QUE NOUS SAVONS DE VOUS" (disponible dans le jeu).</li>
-        </ol>
-
-        <h2>3. Les Cookies (Miam)</h2>
-        <p>Nous utilisons des cookies. Pas ceux aux pépites de chocolat, malheureusement. Ce sont des petits fichiers invisibles qui squattent votre disque dur pour se souvenir que vous êtes déjà venu perdre une partie ici.</p>
-
-        <h2>4. Partage des données</h2>
-        <p>Vos données sont partagées exclusivement avec :</p>
-        <ul>
-            <li><strong>Notre serveur :</strong> Il se sent seul parfois.</li>
-        </ul>
-        <p>Nous ne vendons pas vos données, car personne ne veut les acheter.</p>
-
-        <h2>5. Vos Droits (Si vous en avez encore)</h2>
-        <p>Conformément au RGPD (Règlement Général de Protection des Données), vous avez le droit de :</p>
-        <ul>
-            <li>Garder le silence.</li>
-            <li>Demander l'effacement de vos données (il suffit de fermer l'onglet, magie !).</li>
-            <li>Porter plainte (mais notre avocat est un serpent, il a la langue fourchue).</li>
-        </ul>
-
-        <h2>6. Clause de responsabilité</h2>
-        <p>Le site décline toute responsabilité en cas de :</p>
-        <ul>
-            <li>Perte de productivité due à une addiction au Snake.</li>
-            <li>Crise de nerfs après avoir heurté un mur à la vitesse 130ms.</li>
-            <li>Prise de conscience soudaine que vous êtes tracé partout sur le web.</li>
-        </ul>
-
-        <div class="contact-info">
-            <p><strong>Bureau des Réclamations :</strong> <a href="mailto:anthony.monchal@etu.univ-grenoble-alpes.fr">anthony.monchal@etu.univ-grenoble-alpes.fr</a></p>
-        </div>
-
-        <p><strong>Dernière mise à jour :</strong> <%= date %> (Juste avant que vous n'arriviez)</p>
-        
-        <br>
-        
         <div style="text-align: center;">
-            <p>Êtes-vous prêt à céder votre âme numérique ?</p>
-            <button class="btn-consent" onclick="ouvrirJeu(400, 400)" style="font-size: 1.2em; padding: 15px 30px; background-color: #d9534f; color: white; border: none; cursor: pointer; border-radius: 5px;">
-                JE CONSENS À TOUT
+            <p>Êtes-vous prêt à lancer le snake des hackers ?</p>
+            <button class="btn-consent" onclick="ouvrirJeu(800, 600)" style="font-size: 1.2em; padding: 15px 30px; background-color: #d9534f; color: white; border: none; cursor: pointer; border-radius: 5px;">
+                JOUER
             </button>
         </div>
 
@@ -175,10 +122,7 @@
          style="visibility: hidden; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: auto; z-index: 10000; display: flex; justify-content: center; align-items: center;">
         
         <div class="game-popup" style="background-color: #111; border: 2px solid #00FF00; padding: 20px; border-radius: 10px; text-align: center; color: #00FF00; box-shadow: 0 0 50px rgba(0, 255, 0, 0.2);">
-            <button onclick="afficherInfos()" class="btn-consent" style="font-family: monospace; background-color: #333; color: #00FF00; border: 1px solid #00FF00; padding: 5px 10px; margin-bottom: 15px; cursor: pointer;">
-                VOIR CE QUE NOUS SAVONS DE VOUS
-            </button>
-
+            
             <div style="position: relative;">
                 <span class="close-btn" onclick="fermerJeu()" style="cursor: pointer; position: absolute; top: -45px; right: -10px; font-size: 30px; color: #00FF00;">&times;</span>
             </div>
@@ -191,15 +135,13 @@
             <input type="checkbox" id="checkTeleport" checked> Traverser les murs
         </label>
         <label style="color: #00FF00; font-size: 14px; cursor: pointer;">
-            <input type="checkbox" id="checkBugPlacement"> Placement des fruits sur le serpant
+            <input type="checkbox" id="checkBugPlacement" checked> Placement des fruits sur le serpant
         </label>
         </div>
-        <canvas id="gameCanvas" width="400" height="400"></canvas>
-
-    </div>
+        <canvas id="gameCanvas" width="800px" height="600px"></canvas>
     </div>
 
-     <div id="info-overlay" style="visibility: hidden; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); z-index: 20000; display: flex; justify-content: center; align-items: center;">
+    <div id="info-overlay" style="visibility: hidden; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); z-index: 20000; display: flex; justify-content: center; align-items: center;">
         
         <div style="background-color: #000; border: 2px solid #00FF00; padding: 30px; border-radius: 5px; max-width: 500px; width: 90%; color: #00FF00; font-family: 'Courier New', Courier, monospace; position: relative; box-shadow: 0 0 20px #00FF00;">
             
