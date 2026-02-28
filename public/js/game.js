@@ -1,6 +1,6 @@
 const playlist = [
     "/mus/both retro.mp3",
-    "/mus/snakesong.mp3",
+    "/mus/Snakesong.mp3",
 ];
 
 let tx = 400;
